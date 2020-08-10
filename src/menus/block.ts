@@ -72,12 +72,12 @@ export default function blockMenuItems(): MenuItem[] {
     {
       name: "separator",
     },
-    {
-      name: "table",
-      title: "Table",
-      icon: TableIcon,
-      attrs: { rowsCount: 3, colsCount: 3 },
-    },
+    // {
+    //   name: "table",
+    //   title: "Table",
+    //   icon: TableIcon,
+    //   attrs: { rowsCount: 3, colsCount: 3 },
+    // },
     {
       name: "blockquote",
       title: "Quote",
@@ -98,12 +98,12 @@ export default function blockMenuItems(): MenuItem[] {
       shortcut: `${mod} _`,
       keywords: "horizontal rule break line",
     },
-    {
-      name: "image",
-      title: "Image",
-      icon: ImageIcon,
-      keywords: "picture photo",
-    },
+    // {
+    //   name: "image",
+    //   title: "Image",
+    //   icon: ImageIcon,
+    //   keywords: "picture photo",
+    // },
     {
       name: "link",
       title: "Link",
@@ -111,29 +111,29 @@ export default function blockMenuItems(): MenuItem[] {
       shortcut: `${mod} k`,
       keywords: "link url uri href",
     },
-    {
-      name: "separator",
-    },
-    {
-      name: "container_notice",
-      title: "Info notice",
-      icon: InfoIcon,
-      keywords: "container_notice card information",
-      attrs: { style: "info" },
-    },
-    {
-      name: "container_notice",
-      title: "Warning notice",
-      icon: WarningIcon,
-      keywords: "container_notice card error",
-      attrs: { style: "warning" },
-    },
-    {
-      name: "container_notice",
-      title: "Tip notice",
-      icon: StarredIcon,
-      keywords: "container_notice card suggestion",
-      attrs: { style: "tip" },
-    },
+    // {
+    //   name: "separator",
+    // },
+    // {
+    //   name: "container_notice",
+    //   title: "Info notice",
+    //   icon: InfoIcon,
+    //   keywords: "container_notice card information",
+    //   attrs: { style: "info" },
+    // },
+    // {
+    //   name: "container_notice",
+    //   title: "Warning notice",
+    //   icon: WarningIcon,
+    //   keywords: "container_notice card error",
+    //   attrs: { style: "warning" },
+    // },
+    // {
+    //   name: "container_notice",
+    //   title: "Tip notice",
+    //   icon: StarredIcon,
+    //   keywords: "container_notice card suggestion",
+    //   attrs: { style: "tip" },
+    // },
   ];
 }
