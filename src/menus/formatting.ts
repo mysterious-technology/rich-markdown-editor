@@ -3,6 +3,7 @@ import {
   CodeIcon,
   Heading1Icon,
   Heading2Icon,
+  Heading3Icon,
   ItalicIcon,
   BlockQuoteIcon,
   LinkIcon,
@@ -17,10 +18,7 @@ import isMarkActive from "../queries/isMarkActive";
 import isNodeActive from "../queries/isNodeActive";
 import { MenuItem } from "../types";
 
-export default function formattingMenuItems(
-  state: EditorState,
-  isTemplate: boolean
-): MenuItem[] {
+export default function formattingMenuItems(state: EditorState, isTemplate: boolean): MenuItem[] {
   const { schema } = state;
   const isTable = isInTable(state);
   const isList = isInList(state);
@@ -56,13 +54,13 @@ export default function formattingMenuItems(
       icon: StrikethroughIcon,
       active: isMarkActive(schema.marks.strikethrough),
     },
-    {
-      name: "mark",
-      tooltip: "Highlight",
-      icon: HighlightIcon,
-      active: isMarkActive(schema.marks.mark),
-      visible: !isTemplate,
-    },
+    // {
+    //   name: "mark",
+    //   tooltip: "Highlight",
+    //   icon: HighlightIcon,
+    //   active: isMarkActive(schema.marks.mark),
+    //   visible: !isTemplate,
+    // },
     {
       name: "code_inline",
       tooltip: "Code",
@@ -87,6 +85,14 @@ export default function formattingMenuItems(
       icon: Heading2Icon,
       active: isNodeActive(schema.nodes.heading, { level: 2 }),
       attrs: { level: 2 },
+      visible: allowBlocks,
+    },
+    {
+      name: "heading",
+      tooltip: "Subheading",
+      icon: Heading3Icon,
+      active: isNodeActive(schema.nodes.heading, { level: 2 }),
+      attrs: { level: 3 },
       visible: allowBlocks,
     },
     {
