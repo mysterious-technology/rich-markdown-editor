@@ -1259,6 +1259,8 @@ const StyledEditor = styled("div")<{
   }
 
   .block-menu-trigger {
+    opacity: 0;
+    pointer-events: none;
     display: ${props => (props.readOnly ? "none" : "block")};
     height: 1em;
     color: ${props => props.theme.textSecondary};
