@@ -759,7 +759,7 @@ const StyledEditor = styled("div")<{
       text-decoration: none;
 
       .heading-anchor {
-        opacity: 1;
+        opacity: 0;
       }
     }
   }
@@ -773,13 +773,13 @@ const StyledEditor = styled("div")<{
     display: ${props => (props.readOnly ? "block" : "none")};
     color: ${props => props.theme.textSecondary};
     cursor: pointer;
+    pointer-events: none;
     background: none;
     border: 0;
     outline: none;
     padding: 2px 12px 2px 4px;
     margin: 0;
     position: absolute;
-    transition: opacity 100ms ease-in-out;
     font-family: ${props => props.theme.fontFamilyMono};
     font-size: 22px;
     left: -1.3em;
