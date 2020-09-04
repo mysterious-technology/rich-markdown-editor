@@ -730,26 +730,26 @@ const StyledEditor = styled("div")<{
   }
 
   h1:not(.placeholder):before {
-    content: "H1";
+    content: "";
     line-height: 3em;
   }
   h2:not(.placeholder):before {
-    content: "H2";
+    content: "";
     line-height: 2.8em;
   }
   h3:not(.placeholder):before {
-    content: "H3";
+    content: "";
     line-height: 2.3em;
   }
   h4:not(.placeholder):before {
-    content: "H4";
+    content: "";
     line-height: 2.2em;
   }
   h5:not(.placeholder):before {
-    content: "H5";
+    content: "";
   }
   h6:not(.placeholder):before {
-    content: "H6";
+    content: "";
   }
 
   .heading-name {
