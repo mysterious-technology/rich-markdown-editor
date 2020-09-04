@@ -525,26 +525,26 @@ const StyledEditor = styled_components_1.default("div") `
   }
 
   h1:not(.placeholder):before {
-    content: "H1";
+    content: "";
     line-height: 3em;
   }
   h2:not(.placeholder):before {
-    content: "H2";
+    content: "";
     line-height: 2.8em;
   }
   h3:not(.placeholder):before {
-    content: "H3";
+    content: "";
     line-height: 2.3em;
   }
   h4:not(.placeholder):before {
-    content: "H4";
+    content: "";
     line-height: 2.2em;
   }
   h5:not(.placeholder):before {
-    content: "H5";
+    content: "";
   }
   h6:not(.placeholder):before {
-    content: "H6";
+    content: "";
   }
 
   .heading-name {
@@ -554,7 +554,7 @@ const StyledEditor = styled_components_1.default("div") `
       text-decoration: none;
 
       .heading-anchor {
-        opacity: 1;
+        opacity: 0;
       }
     }
   }
@@ -568,13 +568,13 @@ const StyledEditor = styled_components_1.default("div") `
     display: ${props => (props.readOnly ? "block" : "none")};
     color: ${props => props.theme.textSecondary};
     cursor: pointer;
+    pointer-events: none;
     background: none;
     border: 0;
     outline: none;
     padding: 2px 12px 2px 4px;
     margin: 0;
     position: absolute;
-    transition: opacity 100ms ease-in-out;
     font-family: ${props => props.theme.fontFamilyMono};
     font-size: 22px;
     left: -1.3em;
@@ -1051,6 +1051,8 @@ const StyledEditor = styled_components_1.default("div") `
   }
 
   .block-menu-trigger {
+    opacity: 0;
+    pointer-events: none;
     display: ${props => (props.readOnly ? "none" : "block")};
     height: 1em;
     color: ${props => props.theme.textSecondary};
