@@ -61,7 +61,7 @@ export const base = {
 
 export const light = {
   ...base,
-  background: colors.white,
+  background: "transparent",
   text: colors.almostBlack,
   code: colors.lightBlack,
   cursor: colors.black,
@@ -84,7 +84,7 @@ export const light = {
 
 export const dark = {
   ...base,
-  background: colors.almostBlack,
+  background: "transparent",
   text: colors.almostWhite,
   code: colors.almostWhite,
   cursor: colors.white,
